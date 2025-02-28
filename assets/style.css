@@ -1,8 +1,8 @@
 /* General styling */
 body {
     text-align: center;
-    font-family: Arial, sans-serif;
-    color: pink;
+    font-family: 'Quicksand', sans-serif;
+    color: #ff4d94;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -10,6 +10,18 @@ body {
     position: relative;
     overflow: hidden;
     margin: 0;
+    background-color: #ffe6f2; /* Sweet soft pink background */
+}
+
+/* Apply Google Fonts */
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+}
+
+.location-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 22px;
 }
 
 /* Profile picture styling */
@@ -17,32 +29,16 @@ body {
     position: fixed;
     top: 10px;
     right: 10px;
-    width: 50px; /* Adjust size */
-    height: 50px; /* Adjust size */
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     overflow: hidden;
-    border: 2px solid white; /* Optional border */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    z-index: 1000; /* Ensure it stays on top */
+    border: 2px solid white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
 .profile-picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Video background */
-.video-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -52,7 +48,7 @@ video {
 .container {
     position: relative;
     z-index: 1;
-    background: rgba(31, 31, 31, 0.5);
+    background: rgba(255, 192, 203, 0.8);
     padding: 20px;
     border-radius: 10px;
 }
@@ -68,12 +64,11 @@ video {
 /* Heart button styling */
 .heart-btn {
     position: relative;
-    background: pink;
-    height: 50px; /* Smaller heart */
-    width: 50px; /* Smaller heart */
+    background: rgb(247, 102, 126);
+    height: 50px;
+    width: 50px;
     border: none;
     cursor: pointer;
-    transform: rotate(-45deg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,15 +78,11 @@ video {
 
 /* Fix text visibility inside heart */
 .heart-btn span {
-    transform: rotate(45deg) translate(-50%, -50%);
+    transform: rotate(0);
     display: block;
     font-size: 14px;
     font-weight: bold;
     color: white;
-    position: absolute;
-    z-index: 2;
-    left: 50%;
-    top: 50%;
 }
 
 /* Heart shape */
@@ -101,7 +92,7 @@ video {
     position: absolute;
     width: 50px;
     height: 50px;
-    background: pink;
+    background: rgb(247, 102, 126);
     border-radius: 50%;
     z-index: -1;
 }
@@ -118,20 +109,53 @@ video {
     left: 25px;
 }
 
-/* Full heart turns pink on hover */
+/* Heart turns darker on hover */
 .heart-btn:hover,
 .heart-btn:hover::before,
 .heart-btn:hover::after {
     background: #ff66b2;
 }
 
-/* Hidden location image */
-#locationImg {
+/* Hidden location section */
+#locationContainer {
     display: none;
+    flex-direction: column;
+    align-items: center;
     margin-top: 20px;
+}
+
+/* Location Image */
+#locationImg {
     width: 300px;
     border-radius: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Location Text */
+.location-text {
+    font-size: 18px;
+    color: #ff4d94;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Falling Emoji Effect */
+.emoji {
+    position: fixed;
+    top: -50px;
+    font-size: 2rem;
+    opacity: 0.9;
+    animation: fall linear infinite;
+}
+
+/* Keyframes for falling animation */
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
 }

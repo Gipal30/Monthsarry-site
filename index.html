@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Date Invitation</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="/assets/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -13,19 +17,18 @@
         <img src="/assets/img/me.jpg" alt="Your Photo">
     </div>
 
-    <div class="video-container">
-        <video autoplay muted loop id="bg-video">
-            <source src="/assets/img/12524031_1920_1080_25fps.mp4" type="video/mp4">
-        </video>
-    </div>
-
     <div class="container">
-        <h1>Happy 57th Monthsarry Babe, may i take you  out for a dinner this march 2?</h1>
+        <h1 class="title">Happy 57th Monthsary, Babe! May I take you out to dinner this March 2?</h1>
         <div class="buttons">
             <button id="yesBtn" class="heart-btn"><span>Yes</span></button>
             <button id="noBtn" class="heart-btn"><span>No</span></button>
         </div>
-        <img id="locationImg" src="/assets/img/IMG_0636.jpeg" alt="Date Location">
+
+        <!-- Location Image and Text (Initially Hidden) -->
+        <div id="locationContainer">
+            <img id="locationImg" src="/assets/img/IMG_0636.jpeg" alt="Date Location">
+            <p class="location-text">Can’t wait to see you there! 🎀❤️</p>
+        </div>
     </div>
 
     <script src="/assets/script.js"></script>
